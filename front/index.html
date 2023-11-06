@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud-Mysql</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container-mother">
+
+        <div class="menu-crud">
+             <div><h1>Menu Crud</h1></div>
+            <div class="container-opcoes">
+               <section>
+                   <input type="submit" value="Inserir" class="butoes-menu">
+                    <input type="submit" value="Listar" class="butoes-menu">
+                    <input type="submit" value="Alterar" class="butoes-menu">
+                    <input type="submit" value="Apagar" class="butoes-menu">
+               </section> 
+                
+            </div>
+            <p>Code by</p>
+            <p>&copy;Tafari Vilanculos</p>
+             
+        </div>
+
+        <div class="container-formularios">
+                  <div class="container-inserir">
+                     <form action="../create.php" method="post">
+                           <div class="container-headerform">
+                              <h2>Formulario Estudante</h2>
+                           </div>
+                           <div class="container-inputs">
+                              <input type="text" name="nome" id="" placeholder="Nome" required class="inputs-form">
+                              <input type="text" name="apelido" id="" placeholder="Apelido" required class="inputs-form">
+                               
+                              <select name="selector" id="" required>
+                                 <option value="">Escolha o curso</option>
+                                 <option value="Desenvolvimento de Software">Desenvolvimento de Software</option>
+                                 <option value="Medicina">Medicina</option>
+                                 <option value="Contabilidade">Contabilidade</option>
+                                 <option value="Direito">Direito</option>
+                              </select>
+
+                              <input type="text" name="NumBI" id="" placeholder="NumBI" required class="inputs-form">
+                           </div>
+                           
+                           <div class="container-butoesForm">
+                              <button class="butaoForm" id="btnFecharCadastro">Fechar Formulario</button>
+                             <input  class="butaoForm" type="submit" name="cadastrar" value="Salvar dados">
+                           </div>
+                           
+                          
+                     </form>
+                  </div>
+
+         </div> 
+
+    </div>
+</body>
+</html>
