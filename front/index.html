@@ -1,3 +1,4 @@
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,10 +14,10 @@
              <div><h1>Menu Crud</h1></div>
             <div class="container-opcoes">
                <section>
-                   <input type="submit" value="Inserir" class="butoes-menu">
+                    <input type="submit" value="Inserir" class="butoes-menu" onclick="abrirforminserir()">
                     <input type="submit" value="Listar" class="butoes-menu">
                     <input type="submit" value="Alterar" class="butoes-menu">
-                    <input type="submit" value="Apagar" class="butoes-menu">
+                    <input type="submit" value="Apagar" class="butoes-menu" onclick="formRemover()">
                </section> 
                 
             </div>
@@ -26,37 +27,60 @@
         </div>
 
         <div class="container-formularios">
-                  <div class="container-inserir">
-                     <form action="../create.php" method="post">
+                  <div class="container-forms">
+                     <form action="../insert.php" method="post" id="form-inserir">
                            <div class="container-headerform">
                               <h2>Formulario Estudante</h2>
                            </div>
                            <div class="container-inputs">
                               <input type="text" name="nome" id="" placeholder="Nome" required class="inputs-form">
-                              <input type="text" name="apelido" id="" placeholder="Apelido" required class="inputs-form">
-                               
-                              <select name="selector" id="" required>
-                                 <option value="">Escolha o curso</option>
-                                 <option value="Desenvolvimento de Software">Desenvolvimento de Software</option>
-                                 <option value="Medicina">Medicina</option>
-                                 <option value="Contabilidade">Contabilidade</option>
-                                 <option value="Direito">Direito</option>
-                              </select>
-
-                              <input type="text" name="NumBI" id="" placeholder="NumBI" required class="inputs-form">
+                              <input type="text" name="telefone" id="" placeholder="Telefone" required class="inputs-form">
+                              <input type="email" name="email" id="txtemail" placeholder="introduzaseuemail@gmail.com" required class="inputs-form">
                            </div>
                            
                            <div class="container-butoesForm">
-                              <button class="butaoForm" id="btnFecharCadastro">Fechar Formulario</button>
-                             <input  class="butaoForm" type="submit" name="cadastrar" value="Salvar dados">
-                           </div>
-                           
-                          
+                               
+                                 <input  class="butaoForm" type="submit" name="cadastrar" value="Salvar dados" >
+                              
+                               
+                              <button class="butaoForm" id="btnFecharCadastro" onclick="fecharforminserir()">Fechar Formulario</button>
+                             
+                           </div>  
                      </form>
+
+                     <!----------------Formulario Apagar-------------------->
+                      <form action="../delete.php" method="post" id="formRemover">
+                               <div class="container-headerform">
+                                  <h2>Apagar Estudante do Sistema</h2>
+                               </div>
+
+                               <div class="container-inputRemover">
+                                    <input type="number" name="idEstudante" id="txtEstudante" placeholder="Introduza o id do Estudante" required>
+
+
+                               </div>
+
+                               <p>
+                                   A remoção de um Estudante no sistema não têm volta por favor antes de eliminar certifica o id do Estudante na lista dos estudantes
+                               </p>
+
+                               <div class="container-butoesForm">
+                                 <input  class="butaoForm" type="submit" name="eliminar" value="Remover Estudante" >
+                                 <button class="butaoForm" id="btnFecharFormremover" onclick="fecharformRemover()">Fechar Formulario</button>
+                               </div>
+                      </form>
                   </div>
+ 
+       
+                 
+
+
 
          </div> 
 
     </div>
+
+
+    <script src="script.js"></script>
 </body>
 </html>

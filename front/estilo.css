@@ -59,6 +59,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+     
 }
 
 form{
@@ -68,13 +69,13 @@ form{
     background-color: gray
 
 }
-.container-inserir{
+.container-forms{
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+ }
 
 .container-headerform{
     width: 100%;
@@ -103,7 +104,7 @@ form{
 
 .container-butoesForm{
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: 10px;
     padding: 15px;
 }
@@ -119,8 +120,36 @@ form{
     background-color: green;
     color: white;
 }
-#btnFecharCadastro:hover{
+#btnFecharCadastro,#btnFecharFormremover:hover{
     background-color: rgb(155, 6, 6);
     color: white;
 }
+ #txtemail::placeholder{
+    color: blue;
+ }
+
+ #form-inserir{
+    display: none;
+ }
+
+ #formRemover{
+    display: none;
+ }
+
+.container-inputRemover{
+    margin: 10px;
+
+}
+
+ #txtEstudante{
+    border: none;
+    height: 5vh;
+    width: 100%;
+    border-radius: 10px;
+    font-weight: bolder;
+    padding: 10px;
+ }
+
+  
+
  
