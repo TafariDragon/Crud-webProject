@@ -157,5 +157,18 @@ form{
  }
 
   
+/*=============Estilizacao da tabela ==============*/
+.table{
+    width: 80%;
+
+}
+
+.container-tabela{
+    background-color: rgba(255, 255, 255, 0.606);
+    width: 80%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+}
 
  

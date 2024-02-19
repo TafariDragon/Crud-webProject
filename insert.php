@@ -4,7 +4,6 @@
      $nome = $_POST["nome"];
      $telefone =$_POST["telefone"];
      $email = $_POST["email"];
-     echo($nome);
      include_once('config.php');
      $res=$conexao->prepare("insert into 2l4lds1 (nome,telefone,email) values (:nome,:telefone,:email)");
 
